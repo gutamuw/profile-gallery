@@ -58,16 +58,4 @@ document.getElementById("sortSelect").addEventListener("change", (e) => {
   }
 });
 
-/*document
-  .getElementById("sortByName")
-  .addEventListener("click", () => sortByName(currentPage));
-
-document
-  .getElementById("sortByCountry")
-  .addEventListener("click", () => sortByCountry(currentPage));
-
-document
-  .getElementById("standardSort")
-  .addEventListener("click", () => standardSort());*/
-
 displayProfiles();
