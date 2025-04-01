@@ -1,4 +1,4 @@
-import { getData, displayProfiles } from "../main.js";
+import { getData } from "../main.js";
 import { createProfile } from "../main.js";
 
 export const sortByName = async (currentPage) => {
@@ -11,6 +11,7 @@ export const sortByName = async (currentPage) => {
 
     if (nameA < nameB) return -1;
     if (nameA > nameB) return 1;
+    console.log("hi");
     return 0;
   });
 

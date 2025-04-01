@@ -46,7 +46,19 @@ const loadMore = () => {
   displayProfiles();
 };
 
-document
+document.getElementById("sortSelect").addEventListener("change", (e) => {
+  const selectedTarget = e.target.value;
+
+  if (selectedTarget === "name") {
+    sortByName(currentPage);
+  } else if (selectedTarget === "country") {
+    sortByCountry(currentPage);
+  } else if (selectedTarget === "standard") {
+    standardSort();
+  }
+});
+
+/*document
   .getElementById("sortByName")
   .addEventListener("click", () => sortByName(currentPage));
 
@@ -56,6 +68,6 @@ document
 
 document
   .getElementById("standardSort")
-  .addEventListener("click", () => standardSort());
+  .addEventListener("click", () => standardSort());*/
 
 displayProfiles();
