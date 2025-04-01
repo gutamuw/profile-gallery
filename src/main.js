@@ -1,0 +1,61 @@
+import "./style.css";
+import {
+  sortByName,
+  sortByCountry,
+  standardSort,
+} from "./helpers/sortHelpers.js";
+
+let currentPage = 1;
+const seed = "abc";
+
+export const getData = async (page) => {
+  const response = await fetch(
+    `https://randomuser.me/api/?page=${page}&results=12&seed=${seed}`
+  );
+  const profiles = await response.json();
+  return profiles;
+};
+
+export const createProfile = (profile) => {
+  const profileCard = document.createElement("div");
+  profileCard.className = "profile-card";
+  profileCard.innerHTML = `
+        <img src="${profile.picture.large}" alt="${profile.name.first} ${profile.name.last}">
+        <h2>${profile.name.first} ${profile.name.last}</h2>
+        <a href="mailto:${profile.email}"><i class="fa fa-envelope"></i> ${profile.email}</a>
+        <div class="extra-info"><span>${profile.location.country}</span> <span>${profile.gender}</span></div>   
+    `;
+  return profileCard;
+};
+
+export const displayProfiles = async () => {
+  const profilesContainer = document.getElementById("profilesContainer");
+  const data = await getData(currentPage);
+  const profiles = data.results;
+
+  profiles.forEach((profile) => {
+    profilesContainer.appendChild(createProfile(profile));
+  });
+
+  const loadMoreButton = document.getElementById("loadMoreBtn");
+  loadMoreButton.addEventListener("click", loadMore);
+};
+
+const loadMore = () => {
+  currentPage++;
+  displayProfiles();
+};
+
+document
+  .getElementById("sortByName")
+  .addEventListener("click", () => sortByName(currentPage));
+
+document
+  .getElementById("sortByCountry")
+  .addEventListener("click", () => sortByCountry(currentPage));
+
+document
+  .getElementById("standardSort")
+  .addEventListener("click", () => standardSort());
+
+displayProfiles();
