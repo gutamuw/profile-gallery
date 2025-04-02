@@ -2,6 +2,7 @@ import "./css/style.css";
 import "./css/animations.css";
 import "./header.js";
 import "./footer.js";
+import { searchByName } from "./helpers/searchByName.js";
 
 import {
   sortByName,
@@ -65,6 +66,12 @@ document.getElementById("sortSelect").addEventListener("change", (e) => {
   } else if (selectedTarget === "standard") {
     standardSort();
   }
+});
+
+document.getElementById("searchForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const searchInput = document.getElementById("search").value;
+  searchByName(searchInput);
 });
 
 displayProfiles();
