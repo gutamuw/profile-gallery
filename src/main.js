@@ -3,7 +3,6 @@ import "./css/animations.css";
 import "./header.js";
 import "./footer.js";
 import { searchByName } from "./helpers/searchByName.js";
-
 import {
   sortByName,
   sortByCountry,

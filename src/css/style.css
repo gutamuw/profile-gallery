@@ -60,6 +60,7 @@ button:hover {
 
 #app {
   max-width: 1360px;
+  width: 92%;
   margin: 0 auto;
 }
 
