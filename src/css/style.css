@@ -73,7 +73,43 @@ button:hover {
   border-radius: 18px;
 }
 
-.header select {
+.header input {
+  background: #fff;
+  border: 2px solid #cccccc50;
+  border-radius: 18px;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242424;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header div {
+    width: 100%;
+  }
+
+  .header div select {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.sort-section select {
   background: #fff;
   border: 2px solid #cccccc50;
   border-radius: 18px;
@@ -93,39 +129,22 @@ button:hover {
   background-size: 12px;
 }
 
-.header select:hover {
+.sort-section select:hover {
   border-color: #646cff;
   box-shadow: 1px 1px 5px #00000020;
 }
 
-.header select:focus {
+.sort-section select:focus {
   outline: none;
   border-color: #535bf2;
   box-shadow: 0 0 5px #535bf2;
 }
 
-.header select option {
+.sort-section select option {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 400;
   color: #242424;
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .header div {
-    width: 100%;
-  }
-
-  .header div select {
-    margin-top: 1rem;
-    width: 100%;
-  }
 }
 
 .profiles-container {
