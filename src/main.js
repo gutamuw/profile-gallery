@@ -1,4 +1,7 @@
-import "./style.css";
+import "./css/style.css";
+import "./css/animations.css";
+import { header } from "./header.js";
+import { footer } from "./footer.js";
 import {
   sortByName,
   sortByCountry,
@@ -6,6 +9,9 @@ import {
 } from "./helpers/sortHelpers.js";
 
 let currentPage = 1;
+export let globalProfiles = [];
+export let unsortedProfiles = [];
+
 const seed = "abc";
 
 export const getData = async (page) => {
@@ -34,6 +40,8 @@ export const displayProfiles = async () => {
   const profiles = data.results;
 
   profiles.forEach((profile) => {
+    globalProfiles.push(profile);
+    unsortedProfiles.push(profile);
     profilesContainer.appendChild(createProfile(profile));
   });
 

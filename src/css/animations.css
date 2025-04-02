@@ -1,0 +1,28 @@
+body {
+  opacity: 0;
+  animation: pageFadeIn 1s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+#loadMoreBtn:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}

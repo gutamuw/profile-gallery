@@ -11,20 +11,13 @@
   </head>
   <body>
     <div id="app">
-      <div class="header">
-        <h1>Profiles</h1>
-        <div>
-          <label for="sortSelect">Sort by:</label>
-          <select name="" id="sortSelect">
-            <option value="standard" id="standardSort">Standard</option>
-            <option value="name" id="sortByName">Name</option>
-            <option value="country" id="sortByCountry">Country</option>
-          </select>
-        </div>
-      </div>
+      <header class="header" id="header"></header>
       <div id="profilesContainer" class="profiles-container"></div>
       <button id="loadMoreBtn" class="load-more-btn">Load more</button>
+      <footer id="footer"></footer>
     </div>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/header.js"></script>
+    <script type="module" src="/src/footer.js"></script>
   </body>
 </html>
