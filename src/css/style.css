@@ -23,6 +23,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -51,10 +52,10 @@ button {
   font-weight: 600;
   font-size: 1rem;
   transition: 0.2s;
+}
 
-  &:hover {
-    background: #535bf2;
-  }
+button:hover {
+  background: #535bf2;
 }
 
 #app {
@@ -70,46 +71,44 @@ button {
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 18px;
+}
 
-  select {
-    background: #fff;
-    border: 2px solid #cccccc50;
-    border-radius: 18px;
-    padding: 0.5rem 1.5rem 0.5rem 1rem;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #242424;
-    cursor: pointer;
-    transition: 0.2s;
+.header select {
+  background: #fff;
+  border: 2px solid #cccccc50;
+  border-radius: 18px;
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242424;
+  cursor: pointer;
+  transition: 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
+  background-size: 12px;
+}
 
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+.header select:hover {
+  border-color: #646cff;
+  box-shadow: 1px 1px 5px #00000020;
+}
 
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
-    background-repeat: no-repeat;
-    background-position: calc(100% - 8px) center;
-    background-size: 12px;
+.header select:focus {
+  outline: none;
+  border-color: #535bf2;
+  box-shadow: 0 0 5px #535bf2;
+}
 
-    &:hover {
-      border-color: #646cff;
-      box-shadow: 1px 1px 5px #00000020;
-    }
-
-    &:focus {
-      outline: none;
-      border-color: #535bf2;
-      box-shadow: 0 0 5px #535bf2;
-    }
-
-    option {
-      font-family: inherit;
-      font-size: 1rem;
-      font-weight: 400;
-      color: #242424;
-    }
-  }
+.header select option {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #242424;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,14 +116,15 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
 
-    div {
-      width: 100%;
-      select {
-        margin-top: 1rem;
-        width: 100%;
-      }
-    }
+  .header div {
+    width: 100%;
+  }
+
+  .header div select {
+    margin-top: 1rem;
+    width: 100%;
   }
 }
 
@@ -132,38 +132,40 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
 
-  .profile-card {
-    border: 2px solid #cccccc50;
-    border-radius: 18px;
-    padding: 1.5rem;
-    transition: 0.2s;
+.profiles-container .profile-card {
+  border: 2px solid #cccccc50;
+  border-radius: 18px;
+  padding: 1.5rem;
+  transition: 0.2s;
+}
 
-    &:hover {
-      border-color: #cccccc20;
-      box-shadow: 1px 1px 5px #00000020;
-    }
+.profiles-container .profile-card:hover {
+  border-color: #cccccc20;
+  box-shadow: 1px 1px 5px #00000020;
+}
 
-    img {
-      border-radius: 100%;
-      border: 1px solid #cccccc50;
-    }
-    .extra-info {
-      margin-top: 1.25rem;
-      span {
-        color: #646cff;
-        border: 1px solid #646cff80;
-        padding: 0.125rem 0.5rem;
-        border-radius: 45px;
-        transition: 0.2s;
+.profiles-container .profile-card img {
+  border-radius: 100%;
+  border: 1px solid #cccccc50;
+}
 
-        &:hover {
-          background: #646cff;
-          color: #fff;
-        }
-      }
-    }
-  }
+.profiles-container .profile-card .extra-info {
+  margin-top: 1.25rem;
+}
+
+.profiles-container .profile-card .extra-info span {
+  color: #646cff;
+  border: 1px solid #646cff80;
+  padding: 0.125rem 0.5rem;
+  border-radius: 45px;
+  transition: 0.2s;
+}
+
+.profiles-container .profile-card .extra-info span:hover {
+  background: #646cff;
+  color: #fff;
 }
 
 @media screen and (max-width: 1250px) {
@@ -177,6 +179,7 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
+
 @media screen and (max-width: 650px) {
   .profiles-container {
     grid-template-columns: 1fr;
@@ -189,31 +192,27 @@ button {
   }
 }
 
-footer {
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    border: 2px solid #cccccc50;
-    border-radius: 18px;
-    margin: 1rem 0;
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid #cccccc50;
+  border-radius: 18px;
+  margin: 1rem 0;
+}
 
-    h2 {
-      color: #646cff;
-    }
+footer .footer-content h2 {
+  color: #646cff;
+}
 
-    a {
-      i {
-        font-size: 1.5rem;
-        margin: 0.5rem;
-        color: #646cff;
-        transition: 0.2s;
+footer .footer-content a i {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  color: #646cff;
+  transition: 0.2s;
+}
 
-        &:hover {
-          color: #535bf2;
-        }
-      }
-    }
-  }
+footer .footer-content a i:hover {
+  color: #535bf2;
 }
