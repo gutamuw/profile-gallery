@@ -70,53 +70,61 @@ button {
   padding: 1.5rem;
   margin: 1rem 0;
   border-radius: 18px;
-}
 
-select {
-  background: #fff;
-  border: 2px solid #cccccc50;
-  border-radius: 18px;
-  padding: 0.5rem 1.5rem 0.5rem 1rem;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #242424;
-  cursor: pointer;
-  transition: 0.2s;
-
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
-  background-repeat: no-repeat;
-  background-position: calc(100% - 8px) center;
-  background-size: 12px;
-
-  &:hover {
-    border-color: #646cff;
-    box-shadow: 1px 1px 5px #00000020;
-  }
-
-  &:focus {
-    outline: none;
-    border-color: #535bf2;
-    box-shadow: 0 0 5px #535bf2;
-  }
-
-  option {
+  select {
+    background: #fff;
+    border: 2px solid #cccccc50;
+    border-radius: 18px;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
     font-family: inherit;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     color: #242424;
+    cursor: pointer;
+    transition: 0.2s;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+    background-size: 12px;
+
+    &:hover {
+      border-color: #646cff;
+      box-shadow: 1px 1px 5px #00000020;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #535bf2;
+      box-shadow: 0 0 5px #535bf2;
+    }
+
+    option {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #242424;
+    }
   }
 }
 
 @media screen and (max-width: 600px) {
   .header {
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+
+    div {
+      width: 100%;
+      select {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -172,6 +180,12 @@ select {
 @media screen and (max-width: 650px) {
   .profiles-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .load-more-btn {
+    width: 100%;
   }
 }
 

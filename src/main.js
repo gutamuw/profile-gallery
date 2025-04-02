@@ -1,7 +1,8 @@
 import "./css/style.css";
 import "./css/animations.css";
-import { header } from "./header.js";
-import { footer } from "./footer.js";
+import "./header.js";
+import "./footer.js";
+
 import {
   sortByName,
   sortByCountry,
