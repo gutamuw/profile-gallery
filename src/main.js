@@ -45,9 +45,6 @@ export const displayProfiles = async () => {
     unsortedProfiles.push(profile);
     profilesContainer.appendChild(createProfile(profile));
   });
-
-  const loadMoreButton = document.getElementById("loadMoreBtn");
-  loadMoreButton.addEventListener("click", loadMore);
 };
 
 const loadMore = () => {
@@ -72,5 +69,7 @@ document.getElementById("searchForm").addEventListener("submit", (e) => {
   const searchInput = document.getElementById("search").value;
   searchByName(searchInput);
 });
+
+document.getElementById("loadMoreBtn").addEventListener("click", loadMore);
 
 displayProfiles();
