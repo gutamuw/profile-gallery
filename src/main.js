@@ -13,11 +13,9 @@ let currentPage = 1;
 export let globalProfiles = [];
 export let unsortedProfiles = [];
 
-const seed = "abc";
-
 export const getData = async (page) => {
   const response = await fetch(
-    `https://randomuser.me/api/?page=${page}&results=12&seed=${seed}`
+    `https://randomuser.me/api/?page=${page}&results=12`
   );
   const profiles = await response.json();
   return profiles;
