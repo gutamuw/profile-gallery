@@ -1,8 +1,8 @@
 import { globalProfiles, createProfile } from "../main.js";
+import { clearProfilesContainer } from "./sortHelpers.js";
 
 export const searchByName = (name) => {
-  const profilesContainer = document.getElementById("profilesContainer");
-  profilesContainer.innerHTML = "";
+  clearProfilesContainer();
 
   const filteredProfiles = globalProfiles.filter((profile) => {
     const fullName = `${profile.name.first} ${profile.name.last}`.toLowerCase();

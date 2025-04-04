@@ -44,7 +44,7 @@ export const standardSort = () => {
   });
 };
 
-const clearProfilesContainer = () => {
+export const clearProfilesContainer = () => {
   const profilesContainer = document.getElementById("profilesContainer");
   profilesContainer.innerHTML = "";
 };
