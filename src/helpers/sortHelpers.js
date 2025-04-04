@@ -11,8 +11,7 @@ export const sortByName = () => {
     return 0;
   });
 
-  const profilesContainer = document.getElementById("profilesContainer");
-  profilesContainer.innerHTML = "";
+  clearProfilesContainer();
 
   globalProfiles.forEach((profile) => {
     profilesContainer.appendChild(createProfile(profile));
@@ -30,8 +29,7 @@ export const sortByCountry = () => {
     return 0;
   });
 
-  const profilesContainer = document.getElementById("profilesContainer");
-  profilesContainer.innerHTML = "";
+  clearProfilesContainer();
 
   globalProfiles.forEach((profile) => {
     profilesContainer.appendChild(createProfile(profile));
@@ -39,10 +37,14 @@ export const sortByCountry = () => {
 };
 
 export const standardSort = () => {
-  const profilesContainer = document.getElementById("profilesContainer");
-  profilesContainer.innerHTML = "";
+  clearProfilesContainer();
 
   unsortedProfiles.forEach((profile) => {
     profilesContainer.appendChild(createProfile(profile));
   });
+};
+
+const clearProfilesContainer = () => {
+  const profilesContainer = document.getElementById("profilesContainer");
+  profilesContainer.innerHTML = "";
 };
