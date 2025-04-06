@@ -39,7 +39,7 @@ The backend handles the fetching of the profile data from the Random User API. T
    npm start
    ```
 
-The backend will be available on [http://localhost:5000](http://localhost:5000).
+The backend will be available on [http://localhost:3000](http://localhost:3000).
 
 ## About the Application
 
