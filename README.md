@@ -1,5 +1,3 @@
-Here's the updated README with the changes reflecting your new backend and folder structure:
-
 ---
 
 # Profile Gallery by Ludde
